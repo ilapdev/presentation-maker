@@ -1,0 +1,32 @@
+@import url(/src/assets/reset.css);
+
+@font-face {
+    font-family: 'EuclidCircularA-Light' ;
+    src: url(../src/assets/fonts/Euclid-Circular/EuclidCircularA-Light.woff);
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'EuclidCircularA-EuclidCircularA-Light' ;
+    src: url(../src/assets/fonts/Euclid-Circular/EuclidCircularA-EuclidCircularA-Light.woff);
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'EuclidCircularA-SemiBold' ;
+    src: url(../src/assets/fonts/Euclid-Circular/EuclidCircularA-SemiBold.woff);
+    font-weight: 900;
+    font-style: normal;
+}
+html, body,
+#root {
+    height: 100%;
+}
+
+body {
+    font-family: 'EuclidCircularA-Light' ;
+    box-sizing: border-box;
+    background-color: rgba(245, 245, 245, 1);
+}

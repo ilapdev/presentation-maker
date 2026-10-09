@@ -1,0 +1,45 @@
+.input {
+    font: 400 18px / 20px "EuclidCircularA-Light", sans-serif;
+    min-width: 250px;
+    background-color: none;
+    background: none;
+    outline: none;
+}
+
+.textPropeties,
+.title {
+    border: none;
+    text-align: center;
+    outline:  none;
+    background-color: none;
+    color: #676e78;
+    font: 400 16px / 20px "EuclidCircularA-Light", sans-serif;
+}
+
+.textPropeties {
+    font: 400 14px / 20px "EuclidCircularA-Light", sans-serif;
+}
+
+.title:hover {
+    border: solid #c8c8c8 1px;
+    border-radius: 5px;
+}
+
+.textPropeties {
+    box-sizing: border-box;
+    min-width: 10px;
+    font: 16px/16px "EuclidCircularA-Light", sans-serif;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: #676e78;
+    width: 100px;
+}
+
+.inputObj {
+    border: none;
+    text-align: center;
+    outline:  none;
+    background-color: none;
+}
+

@@ -1,0 +1,67 @@
+.buttonClass {
+    font: 16px/16px "EuclidCircularA-Light", sans-serif;
+    padding: 0 16px;
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: #676e78;
+    background: none;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.buttonClass:hover {
+    opacity: 0.9;
+    transform: translateY(-1px);
+}
+
+.buttonClass::before {
+    content: '';
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    margin-right: 8px;
+}
+
+
+.addElement::before { 
+    background: url('../../assets/images/Add.svg')
+    no-repeat center / contain; 
+}
+
+.saveElement::before { 
+    background: url('../../assets/images/Present.svg')
+    no-repeat center / contain; 
+}
+
+.closeElement::before { 
+    background: url('../../assets/images/Close.svg') 
+    no-repeat center / contain; 
+}
+
+.previewElement::before { 
+    background: url('../../assets/images/Play.svg') 
+    no-repeat center / contain; 
+}
+
+.imageAdd::before { 
+    background: url('../../assets/images/Image.svg') 
+    no-repeat center / contain; 
+}
+
+.addElement,
+.saveElement,
+.closeElement,
+.previewElement,
+.imageAdd {
+    min-width: 100px;
+    height: 40px;
+}
+
+.arrow {
+    min-width: 100px;
+    border: solid #c8c8c8 1px;
+}
