@@ -9,9 +9,9 @@ type ImageObject = BaseObject & {
 }
 
 type FontBase = {
-    fontFamily?: string
-    fontSize?: number
-    fontColor?: string
+    fontFamily: string
+    fontSize: number
+    fontColor: string
 }
 
 type BaseObject = {

@@ -12,14 +12,11 @@ function SlideList({ presentation, onClick }: SlideListProps) {
         <div className={styles.container}>
             {   
                 presentation.slides.map((slide, index) => (
-                    <div key={slide.id}  
-                        className={styles.slideItem}
-                    >
+                    <div key={slide.id} className={styles.slideItem}>
                         <p className={styles.slideNumber}>{index + 1}</p>
                         <div onClick={()=> onClick(index)} className={styles.slideCard}>
                             <SlidePreview  size='small' slide={slide} />
                         </div>
-                        
                     </div>
                 ))
             }

@@ -1,6 +1,5 @@
 import styles from './SlideObject.module.css';
 import type { SlideObject  } from '../../types/objects';
-import type { CSSProperties } from 'react';
 import TextInput from '../TextInput/TextInput';
 
 type SlideObjectProps = {
@@ -10,7 +9,6 @@ type SlideObjectProps = {
 
 function SlideObjectView({ object, onChange }: SlideObjectProps) {
     if(object.type === "text") {
-        
         const inputStyle: React.CSSProperties = {
             position: 'absolute',
             left: `${object.x}px`,
@@ -28,7 +26,7 @@ function SlideObjectView({ object, onChange }: SlideObjectProps) {
                 value={object.content ?? ' '}
                 onChange={onChange}
                 stylesCSS = {inputStyle}  />
-        );
+        )
     }
 
     if(object.type === "image") {
@@ -39,14 +37,15 @@ function SlideObjectView({ object, onChange }: SlideObjectProps) {
             width: `${object.width}px`,
             height: `${object.height}px`,
             objectFit: 'cover'
-        };
+        }
+
         return (
             <img className={styles.imageObject}
                 style={imageStyle}
                 src={object.imageUrl}
                 alt="image"      
             />
-        );
+        )
     }
 }
 

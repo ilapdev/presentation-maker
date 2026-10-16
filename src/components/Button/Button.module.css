@@ -26,7 +26,6 @@
     margin-right: 8px;
 }
 
-
 .addElement::before { 
     background: url('../../assets/images/Add.svg')
     no-repeat center / contain; 
@@ -65,3 +64,70 @@
     min-width: 100px;
     border: solid #c8c8c8 1px;
 }
+
+.colorButton {
+    padding: 8px 10px;
+    border: 1px solid #dce5f5;
+    border-radius: 8px;
+    background: #f4f7ff;
+    color: #356fe5;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.colorButton:hover {
+    background: #e8efff;
+}
+
+.colorSwatch {
+    width: 50px;
+    height: 50px;
+    padding: 0;
+    cursor: pointer;
+}
+
+.itemColor,
+.itemFoto,
+.itemGradient {
+    content: '';
+    display: inline-block;
+    width: 69px;
+    height: 25px;
+    margin-right: 8px;
+}
+
+.itemColor::before { 
+    background: url('../../assets/images/fill-solid.svg') 
+    no-repeat center / contain; 
+}
+
+.itemFoto::before { 
+    background: url('../../assets/images/fill-image.svg') 
+    no-repeat center / contain; 
+}
+
+.itemGradient::before { 
+    background: url('../../assets/images/gradient.svg') 
+    no-repeat center / contain; 
+}
+
+.arrow-right,
+.arrow-left {
+    content: '';
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    margin-right: 8px;
+}
+
+.arrow-right::before { 
+    background: url('../../assets/images/Navigate-To.svg') 
+    no-repeat center / contain; 
+}
+
+.arrow-left::before { 
+    background: url('../../assets/images/Navigate-left.svg') 
+    no-repeat center / contain; 
+}
+

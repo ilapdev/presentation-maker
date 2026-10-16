@@ -20,9 +20,11 @@ function SlidePreview({ slide, size }: SlidePreviewProps) {
             </div>
         );
     }
-    
+
     return (
-        <div className={styles[size!]} style={getStyle(slide.background)}>
+        <div className={styles[size!]} style={
+                getStyle(slide.background)
+            }>
             {  
                 slide.objects.map((object) => (
                     <SlideObjectView  object={object} key={object.id} />

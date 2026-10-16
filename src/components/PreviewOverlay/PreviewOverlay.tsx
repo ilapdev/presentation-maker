@@ -7,39 +7,52 @@ type PreviewOverlayProps = {
     presentation: Presentation
     onClose: () => void
     activeSlideIndex: number
+    onChangeSlide: (index: number) => void
 }
 
-function PreviewOverlay({ presentation, onClose, activeSlideIndex }: PreviewOverlayProps) {
+function PreviewOverlay({ presentation, onClose, activeSlideIndex, onChangeSlide }: PreviewOverlayProps) {
     const activeSlide = presentation.slides[activeSlideIndex]
     const totalSlide = presentation.slides.length
+
+    function goToPreviousSlide() { 
+        if(activeSlideIndex > 0) {
+            onChangeSlide(activeSlideIndex - 1)
+        }
+    }
+
+    function goToNextSlide() { 
+        if(activeSlideIndex < totalSlide - 1 ) {
+            onChangeSlide(activeSlideIndex + 1)
+        }
+    }
+
     if(!activeSlide) {
         return (
             <div className="default">
                 <p>Слайдов в презентации нет!</p>
             </div>
-        );
+        )
     }
     return (
         <div className={styles.overlay}>
             <div className={styles.header}>
                 <Button
                     className='closeElement'
-                    text="Preview"
                     onClick={onClose}
                 />
             </div>
 
             <div className={styles.previewArea}>
-                <SlidePreview size='large' slide={activeSlide} />
+                <SlidePreview size='large-preview' slide={activeSlide} />
             </div>
 
             <div className={styles.navigation}>
-                <Button text="Назад" className='arrow' onClick={() => {}} />
-                <span>{activeSlide.name}  / {totalSlide}</span>
-                <Button className='arrow' text="Далее" onClick={() => {}} />
+                <Button className='arrow-left' onClick={goToPreviousSlide} />
+                <span>{activeSlideIndex + 1}  / {totalSlide}</span>
+                <Button className='arrow-right' onClick={goToNextSlide} />
             </div>
         </div>
-    );
+    )
 }
 
 export default PreviewOverlay;

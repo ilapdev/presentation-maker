@@ -1,24 +1,33 @@
 .overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
     display: flex;
     flex-direction: column;
-    padding: 20px;
-    color: black;
+    width: 100%;
+    height: 100%;
+    height: 100dvh;
+    overflow: hidden;
+    background: #f5f6f8;
 }
 
 .header {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 16px;
-    padding-bottom: 16px;
+    flex-shrink: 0;
+    height: 48px;
+    justify-content: flex-end;
+    border-bottom: 1px solid #e5e7eb;
+    background: #ffffff;
 }
 
 .previewArea {
-    flex: 1;
-    min-height: 0;
+    position: relative;
     display: flex;
+    flex: 1;
     align-items: center;
     justify-content: center;
+    min-height: 0;
+    padding: 16px 64px
 }
 
 .navigation {

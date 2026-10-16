@@ -1,9 +1,10 @@
 import styles from './Button.module.css'
+
 type ButtonProps = {
-    text: string
+    text?: string
     onClick: () => void
     className?: string
-};
+}
 
 function Button({ text, onClick, className }: ButtonProps) {
     return (

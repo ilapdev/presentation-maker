@@ -19,7 +19,6 @@ function TextInput({ value, onChange, placeholder, className, stylesCSS}: TextIn
             onChange={(event) => onChange?.(event.target.value)}
             
         />
-        
     );
 }
 
