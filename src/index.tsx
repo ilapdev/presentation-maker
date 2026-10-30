@@ -11,9 +11,7 @@ const root = createRoot(document.getElementById('root')!);
 
 function renderApp(): void {
     const presentation = getState();
-    if(!presentation) {
-        return;
-    }
+    if(!presentation) return;
     root.render(<App presentation={ presentation } />);
 }
 

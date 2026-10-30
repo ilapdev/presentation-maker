@@ -11,3 +11,19 @@
     height: 150px;
     object-fit: contain;
 }
+
+.no-select-text {
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+.resizeHandle {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: #5af560;
+    border: 1px solid #ffffff;
+    box-sizing: border-box;
+    cursor: nwse-resize;
+    z-index: 1000;
+}

@@ -2,7 +2,17 @@ import type { Slide } from '../types/slide.js';
 import type { TextObject, ImageObject } from '../types/objects.js';
 import  { generateId } from '../functions/generateId.js';
 
-function addTextObject(slide: Slide, content: string, x: number, y: number, width: number, height: number, fontFamily: string, fontSize: number, fontColor: string): Slide {
+function addTextObject(
+    slide: Slide,
+    content: string,
+    x: number,
+    y: number,
+    width: number,
+    height: number,
+    fontFamily: string,
+    fontSize: number,
+    fontColor: string
+): Slide {
     const objectText: TextObject = {
         id: generateId(),
         type: 'text',
@@ -21,7 +31,14 @@ function addTextObject(slide: Slide, content: string, x: number, y: number, widt
     };
 }
 
-function addImageObject(slide: Slide, imageUrl: string, x: number, y: number, width: number, height: number): Slide {
+function addImageObject(
+    slide: Slide,
+    imageUrl: string,
+    x: number,
+    y: number,
+    width: number,
+    height: number
+): Slide {
     const objectImage: ImageObject = {
         id: generateId(),
         type: 'image',
@@ -60,23 +77,34 @@ function moveObject(slide: Slide, id: string, newX: number, newY: number): Slide
     }
 }
 
-function resizeObject(slide: Slide, id: string, newWidth: number, newHeight: number): Slide {
+function resizeObject(
+        slide: Slide,
+        id: string,
+        newWidth: number,
+        newHeight: number
+    ): Slide {
     return {
         ...slide,
         objects: slide.objects.map((object) => {
-            if(object.id === id) {
-                return {
-                    ...object,
-                    width: newWidth,
-                    height: newHeight
-                };
+            if (object.id !== id) {
+                return object;
             }
-            return object;
+            return {
+                ...object,
+                width: Math.max(30, newWidth),
+                height: Math.max(30, newHeight)
+            };
         })
     }
 }
 
-function updateTextObjectStyle(slide: Slide, id: string, fontFamily: string, fontSize: number, fontColor: string): Slide {
+function updateTextObjectStyle(
+    slide: Slide,
+    id: string,
+    fontFamily: string,
+    fontSize: number,
+    fontColor: string
+): Slide {
     return {
         ...slide,
         objects: slide.objects.map((object) => {
@@ -93,6 +121,26 @@ function updateTextObjectStyle(slide: Slide, id: string, fontFamily: string, fon
     }
 }
 
+function updateTextObjectContent(
+    slide: Slide,
+    id: string,
+    content: string
+): Slide {
+    return {
+        ...slide,
+        objects: slide.objects.map((object) => {
+            if (object.id === id && object.type === 'text') {
+                return {
+                    ...object,
+                    content: content
+                };
+            }
+
+            return object;
+        })
+    };
+}
+
 export {
     addTextObject,
     addImageObject,
@@ -100,4 +148,5 @@ export {
     moveObject,
     resizeObject,
     updateTextObjectStyle,
+    updateTextObjectContent
 };

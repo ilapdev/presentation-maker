@@ -7,7 +7,7 @@ function createDefaultSlide(): Slide {
     return {
         id: generateId(),
         name: 'Слайд 1',
-        background: { type: 'solid', color: '#FFFFFF' },
+        background: { type: 'none' },
         objects: []
     };
 }

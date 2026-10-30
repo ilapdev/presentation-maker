@@ -1,29 +1,49 @@
 .input {
-    font: 400 18px / 20px "EuclidCircularA-Light", sans-serif;
-    min-width: 250px;
+    font: 500 18px / 20px "EuclidCircularA-Light", sans-serif;
+    color: #000000;
+    height: auto;
     background-color: none;
+    text-wrap: wrap;
     background: none;
     outline: none;
 }
 
-.textPropeties,
+.textPropeties{
+    border: none;
+    text-align: center;
+    outline: none;
+    background-color: transparent; 
+    background: none;
+    color: #000000;
+    font: 400 15px / 20px "EuclidCircularA-Light", sans-serif;
+    width: 100%;             
+    height: auto;        
+    min-height: 24px;       
+    max-height: 120px;
+    overflow: hidden;
+}
+
 .title {
     border: none;
     text-align: center;
-    outline:  none;
-    background-color: none;
-    color: #676e78;
-    font: 400 16px / 20px "EuclidCircularA-Light", sans-serif;
+    outline: none;
+    background-color: transparent;
+    background: none;
+    color: #000000;
+    font: 500 13px / 14px "EuclidCircularA-Light", sans-serif;
+    width: 100%;             
+    height: auto;        
+    min-height: 24px;
+    padding: 12px;       
+    white-space: pre-wrap;   
+    word-break: break-word;  
+    display: inline-block;
+    resize: none;
+    max-height: 120px;
+    overflow: hidden;
+    box-sizing: border-box;
 }
 
-.textPropeties {
-    font: 400 14px / 20px "EuclidCircularA-Light", sans-serif;
-}
-
-.title:hover {
-    border: solid #c8c8c8 1px;
-    border-radius: 5px;
-}
 
 .textPropeties {
     box-sizing: border-box;
@@ -43,3 +63,54 @@
     background-color: none;
 }
 
+.inputColor {
+    box-sizing: border-box;
+    width: 100px;
+    height: 25px;
+    padding: 2px;
+    background-color: #ffffff;
+    border: 1px solid #E5E5E5;
+    border-radius: 6px;
+    outline: none;
+    cursor: pointer;
+}
+
+.inputColor::-webkit-color-swatch-wrapper {
+    padding: 0;
+}
+
+.inputColor::-webkit-color-swatch {
+    border: none;
+    border-radius: 3px; 
+}
+
+.inputColor::-moz-color-swatch {
+    border: none;
+    border-radius: 3px;
+}
+
+.inputNumber {
+    box-sizing: border-box;
+    width: 56px;
+    height: 25px;
+    padding: 0 8px;
+    font: 400 13px/1 "EuclidCircularA-Light", sans-serif;
+    text-align: center;
+    color: #000000;
+    background-color: #ffffff;
+    border: 1px solid #E5E5E5;
+    border-radius: 5px;
+    outline: none;
+    appearance: textfield;   
+    -moz-appearance: textfield;
+}
+
+.inputNumber::-webkit-outer-spin-button,
+.inputNumber::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.inputNumber:focus {
+    box-shadow: 0 0 0 1px rgba(116, 118, 121, 0.15);
+}

@@ -42,9 +42,8 @@ function moveSlide(presentation: Presentation, slideId: string, newIndex: number
     const slides = [...presentation.slides];
     const removed = slides.splice(slideIndex, 1);
     const slide = removed[0];
-    if(!slide) {
-        throw new Error('Slide not found')
-    }
+    if(!slide) throw new Error('Slide not found')
+    
     slides.splice(newIndex, 0, slide);
 
     return {
@@ -56,9 +55,7 @@ function moveSlide(presentation: Presentation, slideId: string, newIndex: number
 function duplicateSlide(presentation: Presentation, slideId: string): Presentation {
     const slide = presentation.slides.find((slide) => slide.id === slideId);
 
-    if(!slide) {
-        return presentation;
-    }
+    if(!slide) return presentation;
 
     const newSlide: Slide = {...slide,
         id: generateId(),

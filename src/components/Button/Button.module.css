@@ -1,7 +1,5 @@
 .buttonClass {
-    font: 16px/16px "EuclidCircularA-Light", sans-serif;
-    padding: 0 16px;
-    min-height: 44px;
+    font: 14px/16px "EuclidCircularA-Light", sans-serif;
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -11,123 +9,21 @@
     border-radius: 10px;
     cursor: pointer;
     transition: all 0.2s ease;
+    outline: none;
 }
 
-.buttonClass:hover {
-    opacity: 0.9;
-    transform: translateY(-1px);
-}
-
-.buttonClass::before {
+.buttonClass::after {
     content: '';
     display: inline-block;
     width: 25px;
     height: 25px;
-    margin-right: 8px;
+    background-position: center;
+    outline: none;
+    background-repeat: no-repeat;
+    flex-shrink: 0;
 }
 
-.addElement::before { 
-    background: url('../../assets/images/Add.svg')
-    no-repeat center / contain; 
-}
 
-.saveElement::before { 
-    background: url('../../assets/images/Present.svg')
-    no-repeat center / contain; 
-}
 
-.closeElement::before { 
-    background: url('../../assets/images/Close.svg') 
-    no-repeat center / contain; 
-}
 
-.previewElement::before { 
-    background: url('../../assets/images/Play.svg') 
-    no-repeat center / contain; 
-}
-
-.imageAdd::before { 
-    background: url('../../assets/images/Image.svg') 
-    no-repeat center / contain; 
-}
-
-.addElement,
-.saveElement,
-.closeElement,
-.previewElement,
-.imageAdd {
-    min-width: 100px;
-    height: 40px;
-}
-
-.arrow {
-    min-width: 100px;
-    border: solid #c8c8c8 1px;
-}
-
-.colorButton {
-    padding: 8px 10px;
-    border: 1px solid #dce5f5;
-    border-radius: 8px;
-    background: #f4f7ff;
-    color: #356fe5;
-    font-size: 14px;
-    cursor: pointer;
-    transition: background 0.3s ease;
-}
-
-.colorButton:hover {
-    background: #e8efff;
-}
-
-.colorSwatch {
-    width: 50px;
-    height: 50px;
-    padding: 0;
-    cursor: pointer;
-}
-
-.itemColor,
-.itemFoto,
-.itemGradient {
-    content: '';
-    display: inline-block;
-    width: 69px;
-    height: 25px;
-    margin-right: 8px;
-}
-
-.itemColor::before { 
-    background: url('../../assets/images/fill-solid.svg') 
-    no-repeat center / contain; 
-}
-
-.itemFoto::before { 
-    background: url('../../assets/images/fill-image.svg') 
-    no-repeat center / contain; 
-}
-
-.itemGradient::before { 
-    background: url('../../assets/images/gradient.svg') 
-    no-repeat center / contain; 
-}
-
-.arrow-right,
-.arrow-left {
-    content: '';
-    display: inline-block;
-    width: 25px;
-    height: 25px;
-    margin-right: 8px;
-}
-
-.arrow-right::before { 
-    background: url('../../assets/images/Navigate-To.svg') 
-    no-repeat center / contain; 
-}
-
-.arrow-left::before { 
-    background: url('../../assets/images/Navigate-left.svg') 
-    no-repeat center / contain; 
-}
 

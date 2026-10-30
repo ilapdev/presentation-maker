@@ -1,0 +1,51 @@
+.modalTools {
+    position: fixed;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    bottom: 0;
+    margin-bottom: 10px;
+    width: 428px;
+    height: 48px;
+    border-radius: 8px;
+    outline: none;
+    padding-left: 8px;
+    padding-right: 8px;
+    background-color: #FFFFFF;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.Move::after {
+    background-image: url('../../assets/images/Move.svg');
+}
+
+.Text::after {
+    background-image: url('../../assets/images/Text.svg');
+}
+
+.Save::after {
+    background-image: url('../../assets/images/Save.svg');
+}
+
+.Comment::after {
+    background-image: url('../../assets/images/Comment.svg');
+}
+
+.Pdf::after {
+    content: '';
+    background-image: none;
+}
+
+.Image::after {
+    outline: none;
+    background-image: url('../../assets/images/Image.svg');
+}
+
+.backOne::after {
+    background-image: url('../../assets/images/BackOne.svg');
+}
+
+.backTwo::after {
+    background-image: url('../../assets/images/BackTwo.svg');
+}

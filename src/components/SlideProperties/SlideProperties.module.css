@@ -2,58 +2,88 @@
     display: flex;
     flex-direction: column;
     gap: 15px;
+    width: 250px;
     width: 100%;
-    min-width: 0;
-    padding: 20px;
+    height: 100%; 
+    min-height: 480px;
     box-sizing: border-box;
-    background: #ffffff;
+    background: #FFFFFF;
     color: #252a34;
     font-family: "EuclidCircularA-Light", sans-serif;
+    border-left: solid #E5E5E5 1px;
 }
 
 .header {
     display: flex;
-    flex-direction: column;
-    gap: 12px;
-    padding-bottom: 18px;
-    border-bottom: 1px solid #e9edf3;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 8px;
+    padding: 15px;
+    border-bottom: 1px solid #E5E5E5;
 }
 
 .header h3 {
     margin: 0;
-    font-size: 16px;
-    font-weight: 500;
+    font: 500 16px / 16px "EuclidCircularA-Light", sans-serif;
     color: #444c5b;
 }
 
 .slideName {
-    font-size: 14px;
-    font-weight: 500;
+    font: 500 14px / 16px "EuclidCircularA-Light", sans-serif;
     color: #444c5b;
+    min-width: 50px;
+    width: 100%;
 }
 
 .section {
     display: flex;
     flex-direction: column;
-    gap: 14px;
+    gap: 10px;
+    padding: 15px;
+}
+
+.sectionTwo, 
+.sectionThree {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
 .sectionTitle {
     margin: 0;
-    font-size: 14px;
-    font-weight: 500;
+    font: 500 12px / 12px "EuclidCircularA-Light", sans-serif;
     color: #444c5b;
 }
 
-.colorRow {
-    display: flex;
-    border: 1px solid #e1e6ef;
-    border-radius: 10px;
-    align-items: center;
-    gap: 5px;
-    min-width: 0;
+.sectionLabel {
+    font: 400 12px / 14px "EuclidCircularA-Light", sans-serif;
+    color: #444c5b;
 }
 
+.sectionNumber {
+    display: flex;
+    justify-content: space-between ;
+    gap: 8px;
+}
+
+.colorRow,
+.colorRowTwo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-width: 0;
+    height: 30px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    background-color: #F5F5F5;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.colorRowTwo {
+    background-color: #FFFFFF;
+}
 
 .preview {
     width: 100%;
@@ -66,4 +96,145 @@
     background-size: cover;
 }
 
+.colorRow .itemColor,
+.colorRow .itemNone,
+.colorRow .itemFoto,
+.colorRow .itemGradient {
+    width: 85px;
+    height: 30px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    border: 1px solid transparent;
+    cursor: pointer;
+}
 
+.colorRow .itemColor.active,
+.colorRow .itemNone.active,
+.colorRow .itemFoto.active,
+.colorRow .itemGradient.active {
+    border-color: #e1e6ef;
+    background-color: #fff;
+}
+
+.itemColor:hover,
+.itemNone:hover,
+.itemFoto:hover,
+.itemGradient:hover {
+    background-color: rgba(0, 0, 0, 0.04) !important;
+}
+
+/* BUTTON STYLES */
+.itemColor::after { 
+    background: url('../../assets/images/Fill.svg') 
+    no-repeat center / contain; 
+}
+
+.itemNone::after { 
+    background: url('../../assets/images/fill-solid.svg') 
+    no-repeat center / contain; 
+}
+
+.itemFoto::after { 
+    background: url('../../assets/images/fill-image.svg') 
+    no-repeat center / contain; 
+}
+
+.itemGradient::after { 
+    background: url('../../assets/images/gradient.svg') 
+    no-repeat center / contain; 
+}
+
+.colorButton {
+    padding: 8px 10px;
+    border: 1px solid #dce5f5;
+    border-radius: 8px;
+    background: #f4f7ff;
+    color: #356fe5;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.colorButton:hover {
+    background: #e8efff;
+}
+
+.colorSwatch {
+    width: 50px;
+    height: 50px;
+    padding: 0;
+    cursor: pointer;
+}
+/* BUTTON STYLES */
+
+.gradientControls {
+    display: flex;
+    flex-direction: row;       
+    flex-wrap: wrap;           
+    align-items: center;
+    justify-content: space-between; 
+    gap: 12px;
+    margin-top: 10px;
+}
+
+.colorPickerRow {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+}
+
+.colorPickerRow input[type='color'] {
+    width: 50px;           
+    height: 25px;
+    border: 1px solid #ccc;    
+    border-radius: 4px;      
+    cursor: pointer;
+    padding: 0;
+    background: transparent;
+}
+
+.angleRow {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+}
+
+.colorLabel {
+    font-size: 12px;
+    color: #676e78;
+    margin-bottom: 2px;
+}
+
+.minus::after { 
+    background: url('../../assets/images/Remove.svg') 
+    no-repeat center / contain; 
+}
+
+.plus::after { 
+    background: url('../../assets/images/Add.svg') 
+    no-repeat center / contain; 
+}
+
+.inputColor {
+    width: 200px;
+    height: 35px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    padding: 3px;
+    background-color: #ffffff;
+}
+
+
+.saveIcon::after {
+    background-image: url('../../assets/images/saving.svg');
+}
+
+.previewIcon::after {
+    padding-right: 10px;
+    background-image: url('../../assets/images/Present.svg');
+}
